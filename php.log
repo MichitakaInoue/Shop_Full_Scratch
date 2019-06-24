@@ -1,0 +1,5380 @@
+[30-Apr-2019 12:46:21 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[30-Apr-2019 12:46:21 UTC] デバッグ：ユーザー登録ページ
+[30-Apr-2019 12:46:21 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[30-Apr-2019 12:46:21 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[30-Apr-2019 12:46:21 UTC] デバッグ：セッションID:2e9f1covtpunk9d2i724u2q2ap
+[30-Apr-2019 12:46:21 UTC] デバッグ：セッション変数の中身:Array
+(
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：現在日時タイムスタンプ:1556628381
+[30-Apr-2019 12:46:21 UTC] デバッグ：POST送信があります
+[30-Apr-2019 12:46:21 UTC] デバッグ：POST情報：Array
+(
+    [email] => mifsjfs@com.jp
+    [pass] => pasuwado
+    [pass_re] => pasuwado
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：メールじょうほう1
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリ実行準備は完了しています
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリに成功しました
+[30-Apr-2019 12:46:21 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT email FROM users WHERE email=:email AND delete_flg=0
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：Email重複okです
+[30-Apr-2019 12:46:21 UTC] デバッグ：バリデーションOKです
+[30-Apr-2019 12:46:21 UTC] デバッグ：DBに接続します
+[30-Apr-2019 12:46:21 UTC] デバッグ：okです
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリ実行準備は完了しています
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリに成功しました
+[30-Apr-2019 12:46:21 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => INSERT INTO users (email,password,login_time,create_date) VALUES(:email,:pass,:login_time,:create_date)
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリ成功したのでセッション変数の中に値を保存します
+[30-Apr-2019 12:46:21 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_date] => 1556628381
+    [login_limit] => 3600
+    [user_id] => 9
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：マイページへ遷移します
+[30-Apr-2019 12:46:21 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[30-Apr-2019 12:46:21 UTC] デバッグ：マイページ
+[30-Apr-2019 12:46:21 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[30-Apr-2019 12:46:21 UTC] デバッグ：すでにログインしているユーザーです
+[30-Apr-2019 12:46:21 UTC] デバッグ：セッションの中身：Array
+(
+    [login_date] => 1556628381
+    [login_limit] => 3600
+    [user_id] => 9
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：ログイン有効期限内です
+[30-Apr-2019 12:46:21 UTC] デバッグ：スライドを表示させます
+[30-Apr-2019 12:46:21 UTC] デバッグ：ユーザー情報を取得します
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリ実行準備は完了しています
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリに成功しました
+[30-Apr-2019 12:46:21 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 9
+    [username] => 
+    [email] => mifsjfs@com.jp
+    [tel] => 
+    [addr] => 
+    [age] => 
+    [password] => $2y$10$Sr77zPdla44wEtps5Vgsxu.e.t2yHNrqyh7.bPwbSTfzeNu3jF9de
+    [login_time] => 2019-04-30 12:46:21
+    [pic] => 
+    [delete_flg] => 0
+    [create_date] => 2019-04-30 12:46:21
+    [update_date] => 2019-04-30 21:46:21
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリ実行準備は完了しています
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリに成功しました
+[30-Apr-2019 12:46:21 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：全てフェッチ成功です
+[30-Apr-2019 12:46:21 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：自分あてのメッセージを取得します
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリ実行準備は完了しています
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリに成功しました
+[30-Apr-2019 12:46:21 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[30-Apr-2019 12:46:21 UTC] デバッグ：miss
+[30-Apr-2019 12:46:21 UTC] デバッグ：自分宛のメッセージ:0
+[30-Apr-2019 12:46:21 UTC] デバッグ：ユーザー情報を取得します
+[30-Apr-2019 12:46:21 UTC] デバッグ：クエリ実行準備は完了しています
+[30-Apr-2019 12:46:22 UTC] デバッグ：クエリに成功しました
+[30-Apr-2019 12:46:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[30-Apr-2019 12:46:22 UTC] デバッグ：フェッチできませんでした
+[30-Apr-2019 12:46:22 UTC] デバッグ：送信者の名前:
+[30-Apr-2019 12:46:22 UTC] デバッグ：掲示板とそのメッセージを取得します
+[30-Apr-2019 12:46:22 UTC] デバッグ：クエリ実行準備は完了しています
+[30-Apr-2019 12:46:22 UTC] デバッグ：クエリに成功しました
+[30-Apr-2019 12:46:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[30-Apr-2019 12:46:22 UTC] デバッグ：aaaaaa
+[30-Apr-2019 12:46:22 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+)
+
+[30-Apr-2019 12:46:22 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[30-Apr-2019 12:46:22 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 02:06:35 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 02:06:35 UTC] デバッグ：ログイン
+[01-May-2019 02:06:35 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 02:06:35 UTC] デバッグ：すでにログインしているユーザーです
+[01-May-2019 02:06:35 UTC] デバッグ：セッションの中身：Array
+(
+    [login_date] => 1556628381
+    [login_limit] => 3600
+    [user_id] => 9
+    [msg_success] => 
+)
+
+[01-May-2019 02:06:35 UTC] デバッグ：ログイン有効期限オーバーです
+[01-May-2019 02:06:35 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[01-May-2019 02:06:35 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 02:06:35 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 02:06:35 UTC] デバッグ：ログイン
+[01-May-2019 02:06:35 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 02:06:35 UTC] デバッグ：未ログインユーザーです
+[01-May-2019 02:06:35 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[01-May-2019 02:06:35 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 03:03:00 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:03:00 UTC] デバッグ：ログイン
+[01-May-2019 03:03:00 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:03:00 UTC] デバッグ：未ログインユーザーです
+[01-May-2019 03:03:00 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[01-May-2019 03:03:00 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 03:03:09 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:03:09 UTC] デバッグ：ユーザー登録ページ
+[01-May-2019 03:03:09 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:03:09 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[01-May-2019 03:03:09 UTC] デバッグ：セッションID:9jj8k7lmhjuh432isjk4ci4hat
+[01-May-2019 03:03:09 UTC] デバッグ：セッション変数の中身:Array
+(
+)
+
+[01-May-2019 03:03:09 UTC] デバッグ：現在日時タイムスタンプ:1556679789
+[01-May-2019 03:03:57 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:03:57 UTC] デバッグ：ユーザー登録ページ
+[01-May-2019 03:03:57 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:03:57 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[01-May-2019 03:03:57 UTC] デバッグ：セッションID:8ndre0bd8vf3ucnoilbiq8qgqi
+[01-May-2019 03:03:57 UTC] デバッグ：セッション変数の中身:Array
+(
+)
+
+[01-May-2019 03:03:57 UTC] デバッグ：現在日時タイムスタンプ:1556679837
+[01-May-2019 03:03:57 UTC] デバッグ：POST送信があります
+[01-May-2019 03:03:57 UTC] デバッグ：POST情報：Array
+(
+    [email] => gegjwe@.com
+    [pass] => pasuwado
+    [pass_re] => pasuwado
+)
+
+[01-May-2019 03:03:57 UTC] デバッグ：メールじょうほう1
+[01-May-2019 03:03:57 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:03:57 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:03:57 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:03:57 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT email FROM users WHERE email=:email AND delete_flg=0
+)
+
+[01-May-2019 03:03:57 UTC] デバッグ：Email重複okです
+[01-May-2019 03:04:00 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:04:00 UTC] デバッグ：ユーザー登録ページ
+[01-May-2019 03:04:00 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:04:00 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[01-May-2019 03:04:00 UTC] デバッグ：セッションID:slopgu0mrfgta3kkuv78qbokag
+[01-May-2019 03:04:00 UTC] デバッグ：セッション変数の中身:Array
+(
+)
+
+[01-May-2019 03:04:00 UTC] デバッグ：現在日時タイムスタンプ:1556679840
+[01-May-2019 03:04:00 UTC] デバッグ：POST送信があります
+[01-May-2019 03:04:00 UTC] デバッグ：POST情報：Array
+(
+    [email] => gegjwe@.com
+    [pass] => pasuwado
+    [pass_re] => pasuwado
+)
+
+[01-May-2019 03:04:00 UTC] デバッグ：メールじょうほう1
+[01-May-2019 03:04:00 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:00 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:00 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:00 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT email FROM users WHERE email=:email AND delete_flg=0
+)
+
+[01-May-2019 03:04:00 UTC] デバッグ：Email重複okです
+[01-May-2019 03:04:12 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:04:12 UTC] デバッグ：ユーザー登録ページ
+[01-May-2019 03:04:12 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:04:12 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[01-May-2019 03:04:12 UTC] デバッグ：セッションID:097dso35puohvrj471t7ors1rk
+[01-May-2019 03:04:12 UTC] デバッグ：セッション変数の中身:Array
+(
+)
+
+[01-May-2019 03:04:12 UTC] デバッグ：現在日時タイムスタンプ:1556679852
+[01-May-2019 03:04:22 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:04:22 UTC] デバッグ：ユーザー登録ページ
+[01-May-2019 03:04:22 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[01-May-2019 03:04:22 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[01-May-2019 03:04:22 UTC] デバッグ：セッションID:l74os3d6v6c5a0pobeluqq9hf7
+[01-May-2019 03:04:22 UTC] デバッグ：セッション変数の中身:Array
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：現在日時タイムスタンプ:1556679862
+[01-May-2019 03:04:22 UTC] デバッグ：POST送信があります
+[01-May-2019 03:04:22 UTC] デバッグ：POST情報：Array
+(
+    [email] => toru@i.softbank.jp
+    [pass] => pasuwado
+    [pass_re] => pasuwado
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：メールじょうほう1
+[01-May-2019 03:04:22 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:22 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT email FROM users WHERE email=:email AND delete_flg=0
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：Email重複okです
+[01-May-2019 03:04:22 UTC] デバッグ：バリデーションOKです
+[01-May-2019 03:04:22 UTC] デバッグ：DBに接続します
+[01-May-2019 03:04:22 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：okです
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:22 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => INSERT INTO users (email,password,login_time,create_date) VALUES(:email,:pass,:login_time,:create_date)
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ成功したのでセッション変数の中に値を保存します
+[01-May-2019 03:04:22 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_date] => 1556679862
+    [login_limit] => 3600
+    [user_id] => 10
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：マイページへ遷移します
+[01-May-2019 03:04:22 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:04:22 UTC] デバッグ：マイページ
+[01-May-2019 03:04:22 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:04:22 UTC] デバッグ：すでにログインしているユーザーです
+[01-May-2019 03:04:22 UTC] デバッグ：セッションの中身：Array
+(
+    [login_date] => 1556679862
+    [login_limit] => 3600
+    [user_id] => 10
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：ログイン有効期限内です
+[01-May-2019 03:04:22 UTC] デバッグ：スライドを表示させます
+[01-May-2019 03:04:22 UTC] デバッグ：ユーザー情報を取得します
+[01-May-2019 03:04:22 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:22 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 10
+    [username] => 
+    [email] => toru@i.softbank.jp
+    [tel] => 
+    [addr] => 
+    [age] => 
+    [password] => $2y$10$IYaLIOtHBagJK.VBuHiy3.DIiJ1Fn/YyNstGg/kDgRFjnSyvcQNmu
+    [login_time] => 2019-05-01 03:04:22
+    [pic] => 
+    [delete_flg] => 0
+    [create_date] => 2019-05-01 03:04:22
+    [update_date] => 2019-05-01 12:04:22
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[01-May-2019 03:04:22 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:22 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：全てフェッチ成功です
+[01-May-2019 03:04:22 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：自分あてのメッセージを取得します
+[01-May-2019 03:04:22 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:22 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：miss
+[01-May-2019 03:04:22 UTC] デバッグ：自分宛のメッセージ:0
+[01-May-2019 03:04:22 UTC] デバッグ：ユーザー情報を取得します
+[01-May-2019 03:04:22 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:22 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：フェッチできませんでした
+[01-May-2019 03:04:22 UTC] デバッグ：送信者の名前:
+[01-May-2019 03:04:22 UTC] デバッグ：掲示板とそのメッセージを取得します
+[01-May-2019 03:04:22 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:04:22 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:04:22 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：aaaaaa
+[01-May-2019 03:04:22 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+)
+
+[01-May-2019 03:04:22 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[01-May-2019 03:04:22 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 03:36:29 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:36:29 UTC] デバッグ：ログイン
+[01-May-2019 03:36:29 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:36:29 UTC] デバッグ：すでにログインしているユーザーです
+[01-May-2019 03:36:29 UTC] デバッグ：セッションの中身：Array
+(
+    [login_date] => 1556679862
+    [login_limit] => 3600
+    [user_id] => 10
+    [msg_success] => 
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：ログイン有効期限内です
+[01-May-2019 03:36:29 UTC] デバッグ：マイページへ遷移します
+[01-May-2019 03:36:29 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[01-May-2019 03:36:29 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 03:36:29 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:36:29 UTC] デバッグ：マイページ
+[01-May-2019 03:36:29 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 03:36:29 UTC] デバッグ：すでにログインしているユーザーです
+[01-May-2019 03:36:29 UTC] デバッグ：セッションの中身：Array
+(
+    [login_date] => 1556679862
+    [login_limit] => 3600
+    [user_id] => 10
+    [msg_success] => 
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：ログイン有効期限内です
+[01-May-2019 03:36:29 UTC] デバッグ：スライドを表示させます
+[01-May-2019 03:36:29 UTC] デバッグ：ユーザー情報を取得します
+[01-May-2019 03:36:29 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:36:29 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:36:29 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 10
+    [username] => 
+    [email] => toru@i.softbank.jp
+    [tel] => 
+    [addr] => 
+    [age] => 
+    [password] => $2y$10$IYaLIOtHBagJK.VBuHiy3.DIiJ1Fn/YyNstGg/kDgRFjnSyvcQNmu
+    [login_time] => 2019-05-01 03:04:22
+    [pic] => 
+    [delete_flg] => 0
+    [create_date] => 2019-05-01 03:04:22
+    [update_date] => 2019-05-01 12:04:22
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[01-May-2019 03:36:29 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:36:29 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:36:29 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：全てフェッチ成功です
+[01-May-2019 03:36:29 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：自分あてのメッセージを取得します
+[01-May-2019 03:36:29 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:36:29 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:36:29 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：miss
+[01-May-2019 03:36:29 UTC] デバッグ：自分宛のメッセージ:0
+[01-May-2019 03:36:29 UTC] デバッグ：ユーザー情報を取得します
+[01-May-2019 03:36:29 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:36:29 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:36:29 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：フェッチできませんでした
+[01-May-2019 03:36:29 UTC] デバッグ：送信者の名前:
+[01-May-2019 03:36:29 UTC] デバッグ：掲示板とそのメッセージを取得します
+[01-May-2019 03:36:29 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：クエリ実行準備は完了しています
+[01-May-2019 03:36:29 UTC] デバッグ：クエリに成功しました
+[01-May-2019 03:36:29 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：aaaaaa
+[01-May-2019 03:36:29 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+)
+
+[01-May-2019 03:36:29 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[01-May-2019 03:36:29 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 12:47:39 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 12:47:39 UTC] デバッグ：ログイン
+[01-May-2019 12:47:39 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 12:47:39 UTC] デバッグ：すでにログインしているユーザーです
+[01-May-2019 12:47:39 UTC] デバッグ：セッションの中身：Array
+(
+    [login_date] => 1556679862
+    [login_limit] => 3600
+    [user_id] => 10
+    [msg_success] => 
+)
+
+[01-May-2019 12:47:39 UTC] デバッグ：ログイン有効期限オーバーです
+[01-May-2019 12:47:39 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[01-May-2019 12:47:39 UTC] デバッグ：１回だけセッションを取得します
+[01-May-2019 12:47:39 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 12:47:39 UTC] デバッグ：ログイン
+[01-May-2019 12:47:39 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[01-May-2019 12:47:39 UTC] デバッグ：未ログインユーザーです
+[01-May-2019 12:47:39 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[01-May-2019 12:47:39 UTC] デバッグ：１回だけセッションを取得します
+[02-May-2019 01:57:10 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[02-May-2019 01:57:10 UTC] デバッグ：ログイン
+[02-May-2019 01:57:10 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[02-May-2019 01:57:10 UTC] デバッグ：未ログインユーザーです
+[02-May-2019 01:57:10 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[02-May-2019 01:57:10 UTC] デバッグ：１回だけセッションを取得します
+[03-May-2019 11:54:18 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:54:18 UTC] デバッグ：ログイン
+[03-May-2019 11:54:18 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:54:18 UTC] デバッグ：未ログインユーザーです
+[03-May-2019 11:54:18 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[03-May-2019 11:54:18 UTC] デバッグ：１回だけセッションを取得します
+[03-May-2019 11:56:13 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:13 UTC] デバッグ：ログイン
+[03-May-2019 11:56:13 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:13 UTC] デバッグ：未ログインユーザーです
+[03-May-2019 11:56:13 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[03-May-2019 11:56:13 UTC] デバッグ：１回だけセッションを取得します
+[03-May-2019 11:56:23 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:23 UTC] デバッグ：ログイン
+[03-May-2019 11:56:23 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:23 UTC] デバッグ：未ログインユーザーです
+[03-May-2019 11:56:23 UTC] デバッグ：POST情報があります
+[03-May-2019 11:56:23 UTC] デバッグ：POST情報:Array
+(
+    [email] => unkotaro@gmail.com
+    [pass] => michimichiunko
+    [pass_save] => on
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：バリデーションokです
+[03-May-2019 11:56:23 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:23 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:23 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT password,id FROM users WHERE email=:email AND delete_flg=0
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：クエリ結果の中身；Array
+(
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [id] => 7
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：パスワードの照合がマッチしました
+[03-May-2019 11:56:23 UTC] デバッグ：ログイン保持にチェックがあるのでログイン有効期限を30日にします
+[03-May-2019 11:56:23 UTC] デバッグ：セッション変数へ入れた中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：マイページへ遷移します
+[03-May-2019 11:56:23 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[03-May-2019 11:56:23 UTC] デバッグ：１回だけセッションを取得します
+[03-May-2019 11:56:23 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:23 UTC] デバッグ：マイページ
+[03-May-2019 11:56:23 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:23 UTC] デバッグ：すでにログインしているユーザーです
+[03-May-2019 11:56:23 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：ログイン有効期限内です
+[03-May-2019 11:56:23 UTC] デバッグ：スライドを表示させます
+[03-May-2019 11:56:23 UTC] デバッグ：ユーザー情報を取得します
+[03-May-2019 11:56:23 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:23 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:23 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 7
+    [username] => たろうだよ
+    [email] => unkotaro@gmail.com
+    [tel] => 09030593820
+    [addr] => 大阪府大阪市札幌町ハイツ中村494
+    [age] => 22
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [login_time] => 2019-03-25 04:15:25
+    [pic] => uploads/1c9e4613fc11b0b0ecd76f46f6410d164b2ac535.jpeg
+    [delete_flg] => 0
+    [create_date] => 2019-03-25 04:15:25
+    [update_date] => 2019-03-25 13:15:25
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[03-May-2019 11:56:23 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:23 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:23 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：全てフェッチ成功です
+[03-May-2019 11:56:23 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+    [0] => Array
+        (
+            [product_id] => 49
+            [user_id] => 7
+            [delete_flg] => 0
+            [create_date] => 2019-03-29 13:00:55
+            [update_date_like] => 2019-04-03 17:35:59
+            [id] => 49
+            [name] => シューズ
+            [category_id] => 1
+            [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+            [price] => 21000
+            [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-29 22:00:55
+        )
+
+    [1] => Array
+        (
+            [product_id] => 51
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:42:15
+            [update_date_like] => 2019-04-03 17:36:11
+            [id] => 51
+            [name] => ケトルベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 18990
+            [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-30 11:42:15
+        )
+
+    [2] => Array
+        (
+            [product_id] => 54
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:49:50
+            [update_date_like] => 2019-04-03 17:36:15
+            [id] => 54
+            [name] => バーベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 8900
+            [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [update_date] => 2019-03-30 11:49:50
+        )
+
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：自分あてのメッセージを取得します
+[03-May-2019 11:56:23 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:23 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:24 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:24 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[03-May-2019 11:56:24 UTC] デバッグ：ok
+[03-May-2019 11:56:24 UTC] デバッグ：自分宛のメッセージ:Array
+(
+    [0] => Array
+        (
+            [id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:29:20
+            [update_date] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:32:25
+            [update_date] => 
+        )
+
+)
+
+[03-May-2019 11:56:24 UTC] デバッグ：ユーザー情報を取得します
+[03-May-2019 11:56:24 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:24 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:24 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:24 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[03-May-2019 11:56:24 UTC] デバッグ：送信者の名前:えええ
+[03-May-2019 11:56:24 UTC] デバッグ：掲示板とそのメッセージを取得します
+[03-May-2019 11:56:24 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:24 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:24 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:24 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[03-May-2019 11:56:24 UTC] デバッグ：aaaaaa
+[03-May-2019 11:56:24 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+    [0] => Array
+        (
+            [m_id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [1] => Array
+        (
+            [m_id] => 32
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:38
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhwhr
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [2] => Array
+        (
+            [m_id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [3] => Array
+        (
+            [m_id] => 34
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:59
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhrwhrwh
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+)
+
+[03-May-2019 11:56:24 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[03-May-2019 11:56:24 UTC] デバッグ：１回だけセッションを取得します
+[03-May-2019 11:56:28 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[03-May-2019 11:56:28 UTC] デバッグ：記事投稿・編集ページ
+[03-May-2019 11:56:28 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[03-May-2019 11:56:28 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[03-May-2019 11:56:28 UTC] デバッグ：セッションID:gqsa6hqplf9v689ag02v77nlnc
+[03-May-2019 11:56:28 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[03-May-2019 11:56:28 UTC] デバッグ：現在日時タイムスタンプ:1556884588
+[03-May-2019 11:56:28 UTC] デバッグ：ログイン期限日時タイムスタンプ:1559476583
+[03-May-2019 11:56:28 UTC] デバッグ：すでにログインしているユーザーです
+[03-May-2019 11:56:28 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[03-May-2019 11:56:28 UTC] デバッグ：ログイン有効期限内です
+[03-May-2019 11:56:28 UTC] デバッグ：商品登録・編集のために商品情報を取得します
+[03-May-2019 11:56:28 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:28 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:28 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:28 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product WHERE id=:id AND delete_flg=0
+)
+
+[03-May-2019 11:56:28 UTC] デバッグ：商品情報がフェッチできませんでした
+[03-May-2019 11:56:28 UTC] デバッグ：取得してきた商品データ:0
+[03-May-2019 11:56:28 UTC] デバッグ：カテゴリ情報を取得します
+[03-May-2019 11:56:28 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:28 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:28 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:28 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[03-May-2019 11:56:28 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[03-May-2019 11:56:28 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[03-May-2019 11:56:30 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:30 UTC] デバッグ：トップページ
+[03-May-2019 11:56:30 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[03-May-2019 11:56:30 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：カテゴリ情報を取得します
+[03-May-2019 11:56:30 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:30 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:30 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[03-May-2019 11:56:30 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：カテゴリのgetパラメータ:
+[03-May-2019 11:56:30 UTC] デバッグ：並べ替えのgetパラメータ:
+[03-May-2019 11:56:30 UTC] デバッグ：商品情報(商品一覧)を開始します
+[03-May-2019 11:56:30 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：SQL:SELECT id FROM product
+[03-May-2019 11:56:30 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:30 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:30 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：データ：Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[03-May-2019 11:56:30 UTC] デバッグ：クエリ実行準備は完了しています
+[03-May-2019 11:56:30 UTC] デバッグ：クエリに成功しました
+[03-May-2019 11:56:30 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[03-May-2019 11:56:30 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[03-May-2019 11:56:30 UTC] デバッグ：DBには保存されていません(getFormData)
+[03-May-2019 11:56:30 UTC] デバッグ：ページネーションのための値を取得します
+[03-May-2019 11:56:30 UTC] デバッグ：返した最小データmin:1
+[03-May-2019 11:56:30 UTC] デバッグ：返した最大データmax:1
+[03-May-2019 11:56:30 UTC] デバッグ：最大値最小値の処理が成功しました。
+[05-May-2019 02:37:19 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-May-2019 02:37:19 UTC] デバッグ：ログイン
+[05-May-2019 02:37:19 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-May-2019 02:37:20 UTC] デバッグ：すでにログインしているユーザーです
+[05-May-2019 02:37:20 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：ログイン有効期限内です
+[05-May-2019 02:37:20 UTC] デバッグ：マイページへ遷移します
+[05-May-2019 02:37:20 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[05-May-2019 02:37:20 UTC] デバッグ：１回だけセッションを取得します
+[05-May-2019 02:37:20 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-May-2019 02:37:20 UTC] デバッグ：マイページ
+[05-May-2019 02:37:20 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[05-May-2019 02:37:20 UTC] デバッグ：すでにログインしているユーザーです
+[05-May-2019 02:37:20 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：ログイン有効期限内です
+[05-May-2019 02:37:20 UTC] デバッグ：スライドを表示させます
+[05-May-2019 02:37:20 UTC] デバッグ：ユーザー情報を取得します
+[05-May-2019 02:37:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：クエリ実行準備は完了しています
+[05-May-2019 02:37:20 UTC] デバッグ：クエリに成功しました
+[05-May-2019 02:37:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 7
+    [username] => たろうだよ
+    [email] => unkotaro@gmail.com
+    [tel] => 09030593820
+    [addr] => 大阪府大阪市札幌町ハイツ中村494
+    [age] => 22
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [login_time] => 2019-03-25 04:15:25
+    [pic] => uploads/1c9e4613fc11b0b0ecd76f46f6410d164b2ac535.jpeg
+    [delete_flg] => 0
+    [create_date] => 2019-03-25 04:15:25
+    [update_date] => 2019-03-25 13:15:25
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[05-May-2019 02:37:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：クエリ実行準備は完了しています
+[05-May-2019 02:37:20 UTC] デバッグ：クエリに成功しました
+[05-May-2019 02:37:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：全てフェッチ成功です
+[05-May-2019 02:37:20 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+    [0] => Array
+        (
+            [product_id] => 49
+            [user_id] => 7
+            [delete_flg] => 0
+            [create_date] => 2019-03-29 13:00:55
+            [update_date_like] => 2019-04-03 17:35:59
+            [id] => 49
+            [name] => シューズ
+            [category_id] => 1
+            [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+            [price] => 21000
+            [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-29 22:00:55
+        )
+
+    [1] => Array
+        (
+            [product_id] => 51
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:42:15
+            [update_date_like] => 2019-04-03 17:36:11
+            [id] => 51
+            [name] => ケトルベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 18990
+            [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-30 11:42:15
+        )
+
+    [2] => Array
+        (
+            [product_id] => 54
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:49:50
+            [update_date_like] => 2019-04-03 17:36:15
+            [id] => 54
+            [name] => バーベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 8900
+            [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [update_date] => 2019-03-30 11:49:50
+        )
+
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：自分あてのメッセージを取得します
+[05-May-2019 02:37:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：クエリ実行準備は完了しています
+[05-May-2019 02:37:20 UTC] デバッグ：クエリに成功しました
+[05-May-2019 02:37:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：ok
+[05-May-2019 02:37:20 UTC] デバッグ：自分宛のメッセージ:Array
+(
+    [0] => Array
+        (
+            [id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:29:20
+            [update_date] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:32:25
+            [update_date] => 
+        )
+
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：ユーザー情報を取得します
+[05-May-2019 02:37:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：クエリ実行準備は完了しています
+[05-May-2019 02:37:20 UTC] デバッグ：クエリに成功しました
+[05-May-2019 02:37:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：送信者の名前:えええ
+[05-May-2019 02:37:20 UTC] デバッグ：掲示板とそのメッセージを取得します
+[05-May-2019 02:37:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：クエリ実行準備は完了しています
+[05-May-2019 02:37:20 UTC] デバッグ：クエリに成功しました
+[05-May-2019 02:37:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：aaaaaa
+[05-May-2019 02:37:20 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+    [0] => Array
+        (
+            [m_id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [1] => Array
+        (
+            [m_id] => 32
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:38
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhwhr
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [2] => Array
+        (
+            [m_id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [3] => Array
+        (
+            [m_id] => 34
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:59
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhrwhrwh
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+)
+
+[05-May-2019 02:37:20 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[05-May-2019 02:37:20 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 01:37:46 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 01:37:46 UTC] デバッグ：ログイン
+[07-May-2019 01:37:46 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 01:37:46 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 01:37:46 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 01:37:46 UTC] デバッグ：マイページへ遷移します
+[07-May-2019 01:37:46 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[07-May-2019 01:37:46 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 01:37:46 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 01:37:46 UTC] デバッグ：マイページ
+[07-May-2019 01:37:46 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 01:37:46 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 01:37:46 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 01:37:46 UTC] デバッグ：スライドを表示させます
+[07-May-2019 01:37:46 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 01:37:46 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 01:37:46 UTC] デバッグ：クエリに成功しました
+[07-May-2019 01:37:46 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 7
+    [username] => たろうだよ
+    [email] => unkotaro@gmail.com
+    [tel] => 09030593820
+    [addr] => 大阪府大阪市札幌町ハイツ中村494
+    [age] => 22
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [login_time] => 2019-03-25 04:15:25
+    [pic] => uploads/1c9e4613fc11b0b0ecd76f46f6410d164b2ac535.jpeg
+    [delete_flg] => 0
+    [create_date] => 2019-03-25 04:15:25
+    [update_date] => 2019-03-25 13:15:25
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[07-May-2019 01:37:46 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 01:37:46 UTC] デバッグ：クエリに成功しました
+[07-May-2019 01:37:46 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：全てフェッチ成功です
+[07-May-2019 01:37:46 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+    [0] => Array
+        (
+            [product_id] => 49
+            [user_id] => 7
+            [delete_flg] => 0
+            [create_date] => 2019-03-29 13:00:55
+            [update_date_like] => 2019-04-03 17:35:59
+            [id] => 49
+            [name] => シューズ
+            [category_id] => 1
+            [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+            [price] => 21000
+            [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-29 22:00:55
+        )
+
+    [1] => Array
+        (
+            [product_id] => 51
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:42:15
+            [update_date_like] => 2019-04-03 17:36:11
+            [id] => 51
+            [name] => ケトルベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 18990
+            [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-30 11:42:15
+        )
+
+    [2] => Array
+        (
+            [product_id] => 54
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:49:50
+            [update_date_like] => 2019-04-03 17:36:15
+            [id] => 54
+            [name] => バーベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 8900
+            [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [update_date] => 2019-03-30 11:49:50
+        )
+
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：自分あてのメッセージを取得します
+[07-May-2019 01:37:46 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 01:37:46 UTC] デバッグ：クエリに成功しました
+[07-May-2019 01:37:46 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：ok
+[07-May-2019 01:37:46 UTC] デバッグ：自分宛のメッセージ:Array
+(
+    [0] => Array
+        (
+            [id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:29:20
+            [update_date] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:32:25
+            [update_date] => 
+        )
+
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 01:37:46 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 01:37:46 UTC] デバッグ：クエリに成功しました
+[07-May-2019 01:37:46 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：送信者の名前:えええ
+[07-May-2019 01:37:46 UTC] デバッグ：掲示板とそのメッセージを取得します
+[07-May-2019 01:37:46 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 01:37:46 UTC] デバッグ：クエリに成功しました
+[07-May-2019 01:37:46 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：aaaaaa
+[07-May-2019 01:37:46 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+    [0] => Array
+        (
+            [m_id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [1] => Array
+        (
+            [m_id] => 32
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:38
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhwhr
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [2] => Array
+        (
+            [m_id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [3] => Array
+        (
+            [m_id] => 34
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:59
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhrwhrwh
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+)
+
+[07-May-2019 01:37:46 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 01:37:46 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 11:40:52 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:40:52 UTC] デバッグ：ログイン
+[07-May-2019 11:40:52 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:40:52 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:40:52 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:40:52 UTC] デバッグ：マイページへ遷移します
+[07-May-2019 11:40:52 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[07-May-2019 11:40:52 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 11:40:52 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:40:52 UTC] デバッグ：マイページ
+[07-May-2019 11:40:52 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:40:52 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:40:52 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:40:52 UTC] デバッグ：スライドを表示させます
+[07-May-2019 11:40:52 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 11:40:52 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 7
+    [username] => たろうだよ
+    [email] => unkotaro@gmail.com
+    [tel] => 09030593820
+    [addr] => 大阪府大阪市札幌町ハイツ中村494
+    [age] => 22
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [login_time] => 2019-03-25 04:15:25
+    [pic] => uploads/1c9e4613fc11b0b0ecd76f46f6410d164b2ac535.jpeg
+    [delete_flg] => 0
+    [create_date] => 2019-03-25 04:15:25
+    [update_date] => 2019-03-25 13:15:25
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[07-May-2019 11:40:52 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：全てフェッチ成功です
+[07-May-2019 11:40:52 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+    [0] => Array
+        (
+            [product_id] => 49
+            [user_id] => 7
+            [delete_flg] => 0
+            [create_date] => 2019-03-29 13:00:55
+            [update_date_like] => 2019-04-03 17:35:59
+            [id] => 49
+            [name] => シューズ
+            [category_id] => 1
+            [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+            [price] => 21000
+            [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-29 22:00:55
+        )
+
+    [1] => Array
+        (
+            [product_id] => 51
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:42:15
+            [update_date_like] => 2019-04-03 17:36:11
+            [id] => 51
+            [name] => ケトルベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 18990
+            [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-30 11:42:15
+        )
+
+    [2] => Array
+        (
+            [product_id] => 54
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:49:50
+            [update_date_like] => 2019-04-03 17:36:15
+            [id] => 54
+            [name] => バーベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 8900
+            [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [update_date] => 2019-03-30 11:49:50
+        )
+
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：自分あてのメッセージを取得します
+[07-May-2019 11:40:52 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：ok
+[07-May-2019 11:40:52 UTC] デバッグ：自分宛のメッセージ:Array
+(
+    [0] => Array
+        (
+            [id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:29:20
+            [update_date] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:32:25
+            [update_date] => 
+        )
+
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 11:40:52 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：送信者の名前:えええ
+[07-May-2019 11:40:52 UTC] デバッグ：掲示板とそのメッセージを取得します
+[07-May-2019 11:40:52 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：aaaaaa
+[07-May-2019 11:40:52 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+    [0] => Array
+        (
+            [m_id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [1] => Array
+        (
+            [m_id] => 32
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:38
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhwhr
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [2] => Array
+        (
+            [m_id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [3] => Array
+        (
+            [m_id] => 34
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:59
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhrwhrwh
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+)
+
+[07-May-2019 11:40:52 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:40:52 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 11:40:59 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:40:59 UTC] デバッグ：トップページ
+[07-May-2019 11:40:59 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:40:59 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:40:59 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:59 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:59 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:40:59 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:40:59 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:40:59 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:40:59 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:40:59 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:59 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:59 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:40:59 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:40:59 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:40:59 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:40:59 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:40:59 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:40:59 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:40:59 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:40:59 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:40:59 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:45:34 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:34 UTC] デバッグ：トップページ
+[07-May-2019 11:45:34 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:34 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:45:34 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:34 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:34 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:45:34 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:45:34 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:45:34 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:45:34 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:45:34 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:34 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:34 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:45:34 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:34 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:34 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:34 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:34 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:34 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:45:34 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:45:34 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:45:34 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:45:43 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:43 UTC] デバッグ：トップページ
+[07-May-2019 11:45:43 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:43 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:45:43 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:43 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:43 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:45:43 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:45:43 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:45:43 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:45:43 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:45:43 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:43 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:43 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:45:43 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:43 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:43 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:43 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:43 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:43 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:45:43 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:45:43 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:45:43 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:45:52 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:52 UTC] デバッグ：トップページ
+[07-May-2019 11:45:52 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:52 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:45:52 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:45:52 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:45:52 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:45:52 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:45:52 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:45:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:45:52 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:52 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:52 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:52 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:52 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:52 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:45:52 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:45:52 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:45:52 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:45:53 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:53 UTC] デバッグ：トップページ
+[07-May-2019 11:45:53 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:45:53 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:45:53 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:53 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:53 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:45:53 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:45:53 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:45:53 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:45:53 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:45:53 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:53 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:53 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:45:53 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:45:53 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:45:53 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:45:53 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:45:53 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:45:53 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:45:53 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:45:53 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:45:53 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:46:01 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:01 UTC] デバッグ：トップページ
+[07-May-2019 11:46:01 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:01 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:46:01 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:01 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:01 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:46:01 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:46:01 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:46:01 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:46:01 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:46:01 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:01 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:01 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:46:01 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:01 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:01 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:01 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:01 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:01 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:46:01 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:46:01 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:46:01 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:46:02 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:02 UTC] デバッグ：記事投稿・編集ページ
+[07-May-2019 11:46:02 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:02 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[07-May-2019 11:46:02 UTC] デバッグ：セッションID:vuo5a1276mo77nnodql6jotife
+[07-May-2019 11:46:02 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:02 UTC] デバッグ：現在日時タイムスタンプ:1557229562
+[07-May-2019 11:46:02 UTC] デバッグ：ログイン期限日時タイムスタンプ:1559476583
+[07-May-2019 11:46:02 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:46:02 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:02 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:46:02 UTC] デバッグ：商品登録・編集のために商品情報を取得します
+[07-May-2019 11:46:02 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:02 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:02 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:02 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product WHERE id=:id AND delete_flg=0
+)
+
+[07-May-2019 11:46:02 UTC] デバッグ：商品情報がフェッチできませんでした
+[07-May-2019 11:46:02 UTC] デバッグ：取得してきた商品データ:0
+[07-May-2019 11:46:02 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:46:02 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:02 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:02 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:02 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:46:02 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:46:02 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[07-May-2019 11:46:09 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:09 UTC] デバッグ：アカウント登録ページ
+[07-May-2019 11:46:09 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:09 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[07-May-2019 11:46:09 UTC] デバッグ：セッションID:p98oof2faoc6pnn5k1m359ce91
+[07-May-2019 11:46:09 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：現在日時タイムスタンプ:1557229569
+[07-May-2019 11:46:09 UTC] デバッグ：ログイン期限日時タイムスタンプ:1559476583
+[07-May-2019 11:46:09 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:46:09 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:46:09 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 11:46:09 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:09 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:09 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：取得したユーザーデータ：Array
+(
+    [id] => 7
+    [username] => たろうだよ
+    [email] => unkotaro@gmail.com
+    [tel] => 09030593820
+    [addr] => 大阪府大阪市札幌町ハイツ中村494
+    [age] => 22
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [login_time] => 2019-03-25 04:15:25
+    [pic] => uploads/1c9e4613fc11b0b0ecd76f46f6410d164b2ac535.jpeg
+    [delete_flg] => 0
+    [create_date] => 2019-03-25 04:15:25
+    [update_date] => 2019-03-25 13:15:25
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：DB保存ありエラーなし$methodあり
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：DB保存ありエラーなし$methodあり
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：DB保存ありエラーなし$methodあり
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：DB保存ありエラーなし$methodあり
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:09 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:09 UTC] デバッグ：DB保存ありエラーなし$methodあり
+[07-May-2019 11:46:11 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:11 UTC] デバッグ：パスワード変更ページ
+[07-May-2019 11:46:11 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:11 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[07-May-2019 11:46:11 UTC] デバッグ：セッションID:n2enqh01d9pq19foqf5o6ck45f
+[07-May-2019 11:46:11 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:11 UTC] デバッグ：現在日時タイムスタンプ:1557229571
+[07-May-2019 11:46:11 UTC] デバッグ：ログイン期限日時タイムスタンプ:1559476583
+[07-May-2019 11:46:11 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:46:11 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:11 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:46:11 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 11:46:11 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:11 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:11 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:11 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 11:46:11 UTC] デバッグ：取得したユーザ情報：Array
+(
+    [id] => 7
+    [username] => たろうだよ
+    [email] => unkotaro@gmail.com
+    [tel] => 09030593820
+    [addr] => 大阪府大阪市札幌町ハイツ中村494
+    [age] => 22
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [login_time] => 2019-03-25 04:15:25
+    [pic] => uploads/1c9e4613fc11b0b0ecd76f46f6410d164b2ac535.jpeg
+    [delete_flg] => 0
+    [create_date] => 2019-03-25 04:15:25
+    [update_date] => 2019-03-25 13:15:25
+)
+
+[07-May-2019 11:46:11 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:14 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:14 UTC] デバッグ：記事投稿・編集ページ
+[07-May-2019 11:46:14 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:14 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[07-May-2019 11:46:14 UTC] デバッグ：セッションID:mftl9eg2elaf31o0lc015eeija
+[07-May-2019 11:46:14 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:14 UTC] デバッグ：現在日時タイムスタンプ:1557229574
+[07-May-2019 11:46:14 UTC] デバッグ：ログイン期限日時タイムスタンプ:1559476583
+[07-May-2019 11:46:14 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:46:14 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:14 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:46:14 UTC] デバッグ：商品登録・編集のために商品情報を取得します
+[07-May-2019 11:46:14 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:14 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:14 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:14 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product WHERE id=:id AND delete_flg=0
+)
+
+[07-May-2019 11:46:14 UTC] デバッグ：商品情報がフェッチできませんでした
+[07-May-2019 11:46:14 UTC] デバッグ：取得してきた商品データ:0
+[07-May-2019 11:46:14 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:46:14 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:14 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:14 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:14 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:46:14 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:46:14 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[07-May-2019 11:46:16 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:16 UTC] デバッグ：退会ページ
+[07-May-2019 11:46:16 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:16 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[07-May-2019 11:46:16 UTC] デバッグ：セッションID:v5votnd28haf3d2pcqnhl0oife
+[07-May-2019 11:46:16 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:16 UTC] デバッグ：現在日時タイムスタンプ:1557229576
+[07-May-2019 11:46:16 UTC] デバッグ：ログイン期限日時タイムスタンプ:1559476583
+[07-May-2019 11:46:16 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:46:16 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:16 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:46:16 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:19 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:19 UTC] デバッグ：トップページ
+[07-May-2019 11:46:19 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:19 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:46:19 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:19 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:19 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:46:19 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:46:19 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:46:19 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:46:19 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:46:19 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:19 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:19 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:46:19 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:19 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:19 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:19 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:19 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:19 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:46:19 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:46:19 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:46:19 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:46:20 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:20 UTC] デバッグ：マイページ
+[07-May-2019 11:46:20 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:20 UTC] デバッグ：すでにログインしているユーザーです
+[07-May-2019 11:46:20 UTC] デバッグ：セッションの中身：Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：ログイン有効期限内です
+[07-May-2019 11:46:20 UTC] デバッグ：スライドを表示させます
+[07-May-2019 11:46:20 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 11:46:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:20 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：自分のアカウント情報:Array
+(
+    [id] => 7
+    [username] => たろうだよ
+    [email] => unkotaro@gmail.com
+    [tel] => 09030593820
+    [addr] => 大阪府大阪市札幌町ハイツ中村494
+    [age] => 22
+    [password] => $2y$10$doypJmreYuqA/yTgaHEALOdmppM8fw5xDPYzVtfXX/.iaWKTbtjaC
+    [login_time] => 2019-03-25 04:15:25
+    [pic] => uploads/1c9e4613fc11b0b0ecd76f46f6410d164b2ac535.jpeg
+    [delete_flg] => 0
+    [create_date] => 2019-03-25 04:15:25
+    [update_date] => 2019-03-25 13:15:25
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：ユーザーのお気に入り情報を取得します
+[07-May-2019 11:46:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:20 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM `like` AS l LEFT JOIN product AS p ON l.product_id = p.id WHERE l.user_id = :u_id 
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：全てフェッチ成功です
+[07-May-2019 11:46:20 UTC] デバッグ：ユーザーがお気に入りした商品たち:Array
+(
+    [0] => Array
+        (
+            [product_id] => 49
+            [user_id] => 7
+            [delete_flg] => 0
+            [create_date] => 2019-03-29 13:00:55
+            [update_date_like] => 2019-04-03 17:35:59
+            [id] => 49
+            [name] => シューズ
+            [category_id] => 1
+            [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+            [price] => 21000
+            [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-29 22:00:55
+        )
+
+    [1] => Array
+        (
+            [product_id] => 51
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:42:15
+            [update_date_like] => 2019-04-03 17:36:11
+            [id] => 51
+            [name] => ケトルベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 18990
+            [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+            [pic2] => 
+            [pic3] => 
+            [update_date] => 2019-03-30 11:42:15
+        )
+
+    [2] => Array
+        (
+            [product_id] => 54
+            [user_id] => 8
+            [delete_flg] => 0
+            [create_date] => 2019-03-30 02:49:50
+            [update_date_like] => 2019-04-03 17:36:15
+            [id] => 54
+            [name] => バーベル
+            [category_id] => 3
+            [comment] => 
+            [price] => 8900
+            [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+            [update_date] => 2019-03-30 11:49:50
+        )
+
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：自分あてのメッセージを取得します
+[07-May-2019 11:46:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:20 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM message WHERE to_user=:u_id
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：ok
+[07-May-2019 11:46:20 UTC] デバッグ：自分宛のメッセージ:Array
+(
+    [0] => Array
+        (
+            [id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:29:20
+            [update_date] => 
+        )
+
+    [1] => Array
+        (
+            [id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [delete_flg] => 0
+            [create_date] => 2019-04-14 04:32:25
+            [update_date] => 
+        )
+
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：ユーザー情報を取得します
+[07-May-2019 11:46:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:20 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM users WHERE id=:u_id AND delete_flg=0
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：送信者の名前:えええ
+[07-May-2019 11:46:20 UTC] デバッグ：掲示板とそのメッセージを取得します
+[07-May-2019 11:46:20 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:20 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:20 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT m.id AS m_id, m.board_id, m.send_date, m.to_user, m.from_user, m.msg, b.sale_user, b.buy_user, b.product_id, b.create_date FROM message AS m RIGHT JOIN board AS b ON b.id = m.board_id WHERE b.id = :id ORDER BY send_date ASC 
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：aaaaaa
+[07-May-2019 11:46:20 UTC] デバッグ：掲示板遷移のための掲示板の内容:Array
+(
+    [0] => Array
+        (
+            [m_id] => 31
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:20
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => g4ehe4hwhe4h
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [1] => Array
+        (
+            [m_id] => 32
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:29:38
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhwhr
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [2] => Array
+        (
+            [m_id] => 33
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:25
+            [to_user] => 7
+            [from_user] => 8
+            [msg] => じhghごhgはあ
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+    [3] => Array
+        (
+            [m_id] => 34
+            [board_id] => 21
+            [send_date] => 2019-04-14 04:32:59
+            [to_user] => 8
+            [from_user] => 7
+            [msg] => hwhwrhrwhrwh
+            [sale_user] => 7
+            [buy_user] => 8
+            [product_id] => 49
+            [create_date] => 2019-04-14 04:29:14
+        )
+
+)
+
+[07-May-2019 11:46:20 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:20 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 11:46:21 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:21 UTC] デバッグ：ログアウトページ
+[07-May-2019 11:46:21 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[07-May-2019 11:46:21 UTC] デバッグ：セッションID:i4tbqe5qb56qi2k7ihjs4900h3
+[07-May-2019 11:46:21 UTC] デバッグ：セッション変数の中身:Array
+(
+    [login_limit] => 2592000
+    [user_id] => 7
+    [login_date] => 1556884583
+    [msg_success] => 
+)
+
+[07-May-2019 11:46:21 UTC] デバッグ：現在日時タイムスタンプ:1557229581
+[07-May-2019 11:46:21 UTC] デバッグ：ログイン期限日時タイムスタンプ:1559476583
+[07-May-2019 11:46:21 UTC] デバッグ：ログアウトします。セッションを破棄します
+[07-May-2019 11:46:21 UTC] デバッグ：ログインページ遷移します
+[07-May-2019 11:46:21 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:21 UTC] デバッグ：ログイン
+[07-May-2019 11:46:21 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:21 UTC] デバッグ：未ログインユーザーです
+[07-May-2019 11:46:21 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[07-May-2019 11:46:21 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 11:46:23 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:23 UTC] デバッグ：ユーザー登録ページ
+[07-May-2019 11:46:23 UTC] デバッグ：『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『『
+[07-May-2019 11:46:23 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理開始(fun)
+[07-May-2019 11:46:23 UTC] デバッグ：セッションID:monc1avm1er7rl23kbbb6hi93v
+[07-May-2019 11:46:23 UTC] デバッグ：セッション変数の中身:Array
+(
+)
+
+[07-May-2019 11:46:23 UTC] デバッグ：現在日時タイムスタンプ:1557229583
+[07-May-2019 11:46:25 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:25 UTC] デバッグ：トップページ
+[07-May-2019 11:46:25 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:25 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:46:25 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:25 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:25 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:46:25 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:46:25 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:46:25 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:46:25 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:46:25 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:25 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:25 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:46:25 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:25 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:25 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:25 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:25 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:25 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:46:25 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:46:25 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:46:25 UTC] デバッグ：最大値最小値の処理が成功しました。
+[07-May-2019 11:46:25 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:25 UTC] デバッグ：ログイン
+[07-May-2019 11:46:25 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:25 UTC] デバッグ：未ログインユーザーです
+[07-May-2019 11:46:25 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>　画面表示処理終了
+[07-May-2019 11:46:25 UTC] デバッグ：１回だけセッションを取得します
+[07-May-2019 11:46:27 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:27 UTC] デバッグ：トップページ
+[07-May-2019 11:46:27 UTC] デバッグ：「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「「
+[07-May-2019 11:46:27 UTC] デバッグ：GET送信の内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：カテゴリ情報を取得します
+[07-May-2019 11:46:27 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:27 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:27 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM category
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：カテゴリ情報のフェッチに成功しました
+[07-May-2019 11:46:27 UTC] デバッグ：カテゴリ情報:Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [name] => シューズ
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:34
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [name] => ウェア
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:26:54
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [name] => 筋トレ器具
+            [delete_flg] => 0
+            [create_date] => 2019-03-24 00:00:00
+            [update_date] => 2019-03-24 14:27:55
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [name] => サプリメント
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:18:38
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [name] => ケア用品
+            [delete_flg] => 0
+            [create_date] => 2019-03-26 00:00:00
+            [update_date] => 2019-03-26 22:30:36
+        )
+
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：カテゴリのgetパラメータ:
+[07-May-2019 11:46:27 UTC] デバッグ：並べ替えのgetパラメータ:
+[07-May-2019 11:46:27 UTC] デバッグ：商品情報(商品一覧)を開始します
+[07-May-2019 11:46:27 UTC] 返したデータベースハンドラ:PDO Object
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：SQL:SELECT id FROM product
+[07-May-2019 11:46:27 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:27 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:27 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT id FROM product
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：データ：Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：SQL:SELECT * FROM product LIMIT 20 OFFSET 0
+[07-May-2019 11:46:27 UTC] デバッグ：クエリ実行準備は完了しています
+[07-May-2019 11:46:27 UTC] デバッグ：クエリに成功しました
+[07-May-2019 11:46:27 UTC] デバッグ：成功したSQL:PDOStatement Object
+(
+    [queryString] => SELECT * FROM product LIMIT 20 OFFSET 0
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：取得したデータ:Array
+(
+    [total] => 7
+    [total_page] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 49
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => kokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokokoko
+                    [price] => 21000
+                    [pic1] => uploads/f6a4160bf20e6e172f1681c9e3b38a7e8b050be4.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:00:55
+                    [update_date] => 2019-03-29 22:00:55
+                )
+
+            [1] => Array
+                (
+                    [id] => 50
+                    [name] => サプリ
+                    [category_id] => 4
+                    [comment] => ここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここここ
+                    [price] => 8900
+                    [pic1] => uploads/0949fff63756e0d7aa4547f24c9cb5020df0c1d8.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 7
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-29 13:01:56
+                    [update_date] => 2019-03-29 22:01:56
+                )
+
+            [2] => Array
+                (
+                    [id] => 51
+                    [name] => ケトルベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 18990
+                    [pic1] => uploads/c85225e72a8877801251265ec8f12d5acb84cd03.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:42:15
+                    [update_date] => 2019-03-30 11:42:15
+                )
+
+            [3] => Array
+                (
+                    [id] => 52
+                    [name] => ジャージ
+                    [category_id] => 2
+                    [comment] => 
+                    [price] => 21000
+                    [pic1] => uploads/9f8f86d0a85a300cdc558ba9d55098b2a46d23b5.jpeg
+                    [pic2] => 
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:46:15
+                    [update_date] => 2019-03-30 11:46:15
+                )
+
+            [4] => Array
+                (
+                    [id] => 53
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 4444
+                    [pic1] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic2] => uploads/27ae8d00aebfb21cc26f34eccb48c85403087947.jpeg
+                    [pic3] => 
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:47:13
+                    [update_date] => 2019-03-30 11:47:13
+                )
+
+            [5] => Array
+                (
+                    [id] => 54
+                    [name] => バーベル
+                    [category_id] => 3
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:49:50
+                    [update_date] => 2019-03-30 11:49:50
+                )
+
+            [6] => Array
+                (
+                    [id] => 55
+                    [name] => シューズ
+                    [category_id] => 1
+                    [comment] => 
+                    [price] => 8900
+                    [pic1] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic2] => uploads/d25f6434bed22356da93628d0ea8ef6bf59a8ef5.jpeg
+                    [pic3] => uploads/63a03faaefd584ddb9f551b4da4d20865155446b.jpeg
+                    [user_id] => 8
+                    [delete_flg] => 0
+                    [create_date] => 2019-03-30 02:52:16
+                    [update_date] => 2019-03-30 11:52:16
+                )
+
+        )
+
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 画面表示処理終了
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力内容の保持のために確認します
+[07-May-2019 11:46:27 UTC] デバッグ：フォーム入力保持のエラー内容:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：送信方法の種類:Array
+(
+)
+
+[07-May-2019 11:46:27 UTC] デバッグ：DBには保存されていません(getFormData)
+[07-May-2019 11:46:27 UTC] デバッグ：ページネーションのための値を取得します
+[07-May-2019 11:46:27 UTC] デバッグ：返した最小データmin:1
+[07-May-2019 11:46:27 UTC] デバッグ：返した最大データmax:1
+[07-May-2019 11:46:27 UTC] デバッグ：最大値最小値の処理が成功しました。

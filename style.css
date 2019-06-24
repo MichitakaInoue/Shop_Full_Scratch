@@ -1,0 +1,557 @@
+/*========================================
+商品登録
+========================================*/
+.text-length{
+  text-align: right;
+}
+
+
+
+
+
+/*========================================
+
+========================================*/
+
+.msg-slide{
+  position: fixed;
+  top: 0;
+  color: black;
+  width: 100%;
+  height: 60px;
+  background: rgba(245,255,54,0.9);
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+
+  margin-top: auto ;
+  margin-bottom: auto;
+}
+
+/*========================================
+商品一覧 ,検索サイドバー
+========================================*/
+.product-wrap{
+  overflow: hidden;
+  width: 1140px;
+  box-sizing: border-box;
+
+  padding: 60px;
+}
+.product-list{
+  /* 各商品パネル */
+  float: left;
+  width: 22%;
+  /* 可変 */
+  height: 250px;
+
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 60px;
+}
+.product-img{
+  width: 100%;
+  height: 80%;
+}
+/* 画像本体 */
+.product-pic{
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+}
+.product-title{
+  /* ハート　タイトルは可変 */
+  width: 100%;
+  height: 10%;
+}
+.product-title a{
+  color: white;
+  font-weight: bold;
+}
+.product-price{
+  width: 100%;
+  height: 10%;
+  color: white;
+  font-weight: bold;
+}
+.product-price a{
+  color: white;
+  font-weight: bold;
+}
+/*　並べ替え検索欄 */
+.sort-search{
+  margin-top: 65px;
+}
+/*========================================
+ページネーション
+========================================*/
+.pagenation{
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+}
+.pagenation-list{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  list-style: none;
+  height: 30px;
+  float: left;
+
+  padding: 0;
+  margin: 0 auto;
+}
+.list-item{
+  float: left;
+}
+.list-item a{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+/*========================================
+商品詳細ページ
+========================================*/
+.productDetail-wrap{
+  padding: 100px;
+
+}
+.page-productDetail #main{
+  float: left;
+  width: 40%;
+
+  margin: 0 120px 100px 0 ;
+}
+.product-detail{
+  float: left;
+  width: 45%;
+  border: 2px solid white;
+
+  padding: 25px;
+  margin: 0;
+}
+.productDetail-title{
+  position: relative;
+  color: white;
+
+  margin-bottom: 50px;
+}
+.productDetail-title a{
+  font-size: 20px;
+  color: white;
+}
+.productDetail-title h2{
+  font-weight: bold;
+  font-size: 40px;
+}
+/*商品お気に入りアイコン*/
+.product-icon{
+  position: absolute;
+  top: 55px;
+  right: 0;
+}
+.product-back{
+  position: absolute;
+  bottom: 200px;
+  right: 100px;
+
+  font-size: 30px;
+  color: white;
+  text-align: left;
+
+}
+.img-main{
+  width: 100%;
+  height: 540px;
+}
+.img-main img{
+  width: 100%;
+  height: 90%;
+}
+.img-sub{
+  width: 100%;
+  height: 140px;
+  padding: 0 5px;
+}
+.img-sub img{
+  height: 100%;
+  width: 140px;
+
+  margin: 0 5px;
+}
+/*.detail-head{
+  width: 100%;
+}*/
+.product-detail h2{
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+
+  padding-bottom: 20px;
+  border-bottom: 2px solid #b6a489;
+
+  margin:0;
+}
+.product-comment{
+  color: white;
+  font-size: 25px;
+  word-wrap: break-word;
+  margin:0;
+}
+
+/*========================================
+購入後連絡掲示板
+========================================*/
+.msg-container{
+  padding: 150px;
+}
+.msgProduct-container{
+  overflow: hidden;
+  height: 200px;
+
+  padding: 40px 90px;
+}
+.msg-main{
+  border: 2px solid white;
+
+  padding: 50px;
+  margin-bottom: 30px;
+}
+/* 販売者情報 */
+.user-data{
+  float:left;
+  width: 55%;
+  height: 100%;
+}
+.board-product{
+  float: left;
+  width: 43%;
+  height: 100%;
+}
+/* 出品者のプロフ画像 */
+.msg-pic{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.user-individual, .product-individual{
+  color: white;
+}
+.msgProduct-pic{
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+}
+/*========================================
+購入後連絡掲示板,チャット
+========================================*/
+.chat-container{
+  overflow: hidden;
+
+  margin-bottom: 10px;
+}
+.msg-right{
+  overflow: hidden;
+  width: 100%;
+
+  margin-bottom: 40px;
+}
+.msg-left{
+  overflow: hidden;
+  width: 100%;
+
+  margin-bottom: 40px;
+}
+.chat-img-left{
+  float: left;
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+.chat-img-right{
+  float: right;
+  width: 100px;
+  height:100px;
+  border-radius: 50%;
+
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+.chat-msg-left{
+  position: relative;
+  display: inline;
+  /* あとで消す */
+  width: 750px;
+  border: 1px solid white;
+  box-sizing: border-box;
+
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-left: 10px;
+  
+  margin: auto 0;
+}
+.chat-msg-left::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid white;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.chat-msg-right{
+  position: relative;
+  display: inline;
+  /* あとで消す */
+  width: 750px;
+  border: 1px solid white;
+  box-sizing: border-box;
+
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-right: 10px;
+  
+  margin: auto 0;
+}
+
+.chat-msg-right::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  right: -15px;
+  top: 20px;
+  border-left: 15px solid white;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.non-msg{
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+/*========================================
+マイページ
+========================================*/
+.mypage-main-wrap{
+  /*後で消す*/
+  /*height: 600px;*/
+  padding:60px; 
+}
+.my-img{
+  width: 100%;
+  height:200px;
+  border-radius: 50%;
+
+  margin-bottom: 10px;
+}
+.prof-username{
+  color: white;
+  font-size: 20px;
+
+  margin-bottom: 40px;
+}
+/*お気に入り一覧*/
+.like-mypage{
+  overflow: hidden;
+  width: 80%;
+  /*消す*/
+  /*height: 200px;*/
+  /*border:1px solid white;*/
+
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:100px;
+}
+.panel{
+  width: 25%;
+  float: left;
+
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+.panel-head{
+  /*width: 100%;*/
+}
+.panel-head img{
+  width: 100%;
+  border-radius: 10%;
+}
+.panel-body{
+  height: 50px;
+}
+
+/*購入した商品*/
+.sale-mypage{
+  width: 80%;
+  /*消す*/
+  height: 200px;
+  border:1px solid white;
+
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:100px;
+}
+/* メッセージ一覧*/
+.msg-mypage{
+  width: 80%;
+  /*消す*/
+  height: 200px;
+  /*border:1px solid white;*/
+
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:100px;
+}
+/*========================================
+マイページ　連絡情報
+========================================*/
+table{
+  width: 100%;
+  height: 100%;
+}
+thead{
+  text-align: left;
+  
+}
+tbody{
+  
+}
+tr{
+  background: hsl(36, 3%, 62%);
+  color:white;
+  
+}
+td{
+  background: hsl(36, 3%, 62%);
+}
+
+/*========================================
+簡易ログイン　オブジェクト指向 login-btn.php
+========================================*/
+.object-login-wrap{
+  overflow: hidden;
+  /* float: left; */
+  width: 800px;
+  /* height: 600px; */
+  /* border: 2px dotted #b6a489; */
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+#start-wrap{
+  width: 50%;
+  height: 30%;
+  /* border: 2px dotted #b6a489; */
+
+  padding: 30px;
+  margin-left: 300px;
+  /* margin-top: 150px;  */
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: auto; */
+}
+#start-select{
+  width: 100%;
+  height: 100%;
+}
+#start-select a{
+  color: white;
+}
+#game-wrap{
+ float: left;
+ width: 100%;
+ /* 消す */
+ /* height: 700px; */
+ /* border: 2px dotted #b6a489;  */
+}
+.game-display{
+  position: relative;
+  overflow: hidden;
+  background: #9966FF;
+  width: 80%;
+  /* 消す */
+  min-height: 500px;
+  /* border: 2px dotted #b6a489;  */
+
+  padding: 20px;
+  margin: auto;
+  margin-top: 40px;
+  
+}
+.game-select{
+  width: 60%;
+  height: 300px;
+  /* border: 2px dotted #b6a489;  */
+  
+  margin: auto;
+}
+.monster-img{
+  width: 250px;
+  height: 200px;
+  float: right;
+}
+.human-img{
+  position: absolute;
+  top: 280px;
+  left: 50px;
+  width:250px;
+  height: 200px;
+}
+#monster-name-container{
+  width: 300px;
+  /* border: 1px dotted #b6a489;  */
+  
+  margin-top: 10px;
+}
+.monster-title{
+  
+}
+.history-container{
+  
+}
+.game-history{
+ float: left; 
+
+ margin-top: 40px;
+}
+.btn-atk{
+  font-size:40px; 
+  border-radius: 300px; 
+  height:200px; 
+  margin-top:60px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
